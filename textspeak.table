@@ -1,0 +1,134 @@
+# Textspeak, whole words.
+#
+# leetspeak varies a word letter by letter. This one swaps a whole word for the way it gets typed in
+# a hurry: you for u, great for gr8, tonight for 2nite. The longest match rule makes it work, so a
+# source of several characters is taken over any shorter source that also matches there, and before
+# becomes one token rather than b, e, f, o, r, e.
+#
+# One rule to a line: the source word, a tab, then the textspeak form to put in its place. A word may
+# have more than one line, and every form is tried; leaving the word as it was is always one of the
+# choices, so the plain spelling is never lost.
+#
+# Lowercase only. Give it alongside a case table for the uppercase and mixed forms:
+#
+#   hashcat -m 0 -a 5 hashes.txt words.txt tables/textspeak.table tables/toggle.table
+#
+# Read into one set with the other tables the same way:
+#
+#   hashcat -m 0 -a 5 hashes.txt words.txt tables/leetspeak-common.table tables/textspeak.table
+#
+# Adding this table to a run does not only add. Longest match takes the whole word as one token, so
+# the letters inside it stop varying: a word already in here will not also be leetspoken in the same
+# candidate. That is the price of matching whole words, and it is worth knowing before you put a very
+# common word in here.
+#
+# The list is a starting set. Add what your target audience would actually type.
+
+# Homophones: letter or number for the whole word.
+you	u
+your	ur
+your	yr
+are	r
+be	b
+see	c
+sea	c
+why	y
+oh	o
+okay	k
+and	n
+and	&
+at	@
+to	2
+too	2
+two	2
+for	4
+four	4
+fore	4
+one	1
+won	1
+ate	8
+
+# gr8 family: number swallowing the -ate / -ait / -eight sound.
+great	gr8
+mate	m8
+late	l8
+later	l8r
+wait	w8
+weight	w8
+hate	h8
+date	d8
+fate	f8
+gate	g8
+skate	sk8
+straight	str8
+before	b4
+forget	4get
+forever	4eva
+forever	4ever
+today	2day
+tonight	2nite
+tonight	2night
+tomorrow	2moro
+tomorrow	2morrow
+tomorrow	2morow
+tomorrow	2morro
+tomorrow	2mrw
+
+# Compressions: vowels and soft letters dropped.
+please	pls
+please	plz
+thanks	thx
+thanks	tnx
+thank	thx
+because	bc
+because	cuz
+because	cos
+about	bout
+people	ppl
+message	msg
+number	num
+with	w
+with	wid
+love	luv
+good	gud
+friend	frnd
+friend	frend
+little	lil
+brother	bro
+sister	sis
+probably	prob
+probably	prolly
+definitely	def
+whatever	wateva
+whatever	wtvr
+whatever	wtv
+whatever	watever
+whatever	watvr
+something	sumthin
+something	smth
+something	smtg
+something	smt
+someone	sum1
+everyone	every1
+anyone	any1
+everything	evrythin
+everything	everythin
+
+# d and n for th, and the -ite spellings.
+the	da
+that	dat
+this	dis
+this	ts
+them	dem
+then	den
+there	dere
+their	der
+what	wot
+what	wat
+night	nite
+light	lite
+right	rite
+alright	aight
+know	kno
+know	knw
+now	nw

@@ -6,9 +6,10 @@
 #
 # Keys that produce the same character in both layouts are left out. They are what the mapping does
 # not change, and listing them says nothing.
-# Taki kierunek przyjmuje parametr --keyboard-layout-mapping:
-#
+# 
+# The `--keyboard-layout-mapping` parameter takes the following format:
 #   hashcat -m 13721 hashes.txt --keyboard-layout-mapping tables/layouts/pl_qwertz.table
+
 z	y
 Z	Y
 y	z

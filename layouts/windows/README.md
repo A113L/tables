@@ -166,3 +166,7 @@ python3 tools/windows_layouts/verify.py --native /tmp/native_table_probe
 The archive carries the original repository's GPL-3.0 license. No Hashcat binary
 or source checkout is bundled; the optional probe compiles against a separately
 obtained Hashcat checkout. Nothing has been pushed or submitted upstream.
+
+## Credits
+
+@YD

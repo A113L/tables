@@ -1,0 +1,81 @@
+# US to Bulgarian (Typewriter)
+# Windows KLID(s): 00000402
+# Base/Shift; Caps Lock off. No AltGr, keypad, IME or platform-specific extra keys.
+# Physical positions from the 49-key Microsoft reference diagrams, including ISO 0x56.
+# Blank/unassigned states are omitted; they are NOT deletion rules.
+# UTF-8. Source TAB replacement. Unmatched input passes through.
+# Use identity=0; multiple outputs can remain due to ambiguous physical keys.
+# Example: hashcat -a 5 --stdout words.txt layouts/windows/00000402_bulgarian_typewriter-reverse.table identity=0
+# Use one file per run. Do not merge directions or unrelated layouts.
+# Source snapshot retrieved 2026-10-07; see README.md and COVERAGE.md.
+# Multi-character outputs are preserved as tokens; longest-match can hide other segmentations.
+# Table-attack file; not suitable for --keyboard-layout-mapping.
+# Bulgarian (Typewriter): https://learn.microsoft.com/en-us/globalization/keyboards/kbdbu.html
+
+`	(
+q	,
+w	у
+e	е
+r	и
+t	ш
+y	щ
+u	к
+i	с	o	д
+p	з
+[	ц
+]	;
+a	ь
+s	я
+d	а
+f	о
+g	ж
+h	г
+j	т
+k	н
+l	в
+;	м
+'	ч
+z	ю
+x	й
+c	ъ
+v	э
+b	ф
+n	х
+m	п
+,	р
+.	л
+/	б
+~	)
+Q	ы
+W	У
+E	Е
+R	И
+T	Ш
+Y	Щ
+U	К
+I	С
+O	Д
+P	З
+{	Ц
+}	:
+A	Ь
+S	Я
+D	А
+F	О
+G	Ж
+H	Г
+J	Т
+K	Н
+L	В
+:	М
+"	Ч
+Z	Ю
+X	Й
+C	Ъ
+V	Э
+B	Ф
+N	Х
+M	П
+<	Р
+>	Л
+?	Б
